@@ -1,0 +1,180 @@
+
+
+  .h1, h2, h3{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%; /* imposta la larghezza del container */ 
+    height: 100vh; /* imposta l'altezza del container */ 
+    display: flex; /* da al container layout flexbox (letteralmente scatola flessibile) */ 
+    flex-direction: column; /* specifica la direzione degli elementi in modo colonnale */ 
+  }
+  
+  .intestazione {
+    background: linear-gradient(to bottom right, #62ff4d, #ce690b); /* imposta il colore del background dell'intestazione */ 
+    color: white; /* imposta il colore del testo*/ 
+    padding:0px; 
+    font-size: 40px; /* imposta la grandezza del font */ 
+  }
+  
+  .sottotitolo {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  
+  .scroll-content {
+    display: flex;
+    flex-shrink: 0;
+    white-space: nowrap;
+    animation: ticker-infinito 190s linear infinite;
+  }
+  
+  .scroll-content span {
+    font-size: 30px;
+    padding-right: 50px; /* Spazio tra le ripetizioni */
+    display: inline-block;
+  }
+  
+  @keyframes ticker-infinito {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  /* Ferma il movimento se ci passi sopra col mouse */
+  .sottotitolo:hover .scroll-content {
+    animation-play-state: paused;
+  }
+
+
+  .sottosottotitolo{
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+
+  .infobox { /* stile per il container dell'infobox*/ 
+    display: flex;
+    justify-content: space-between; /*crea spazio tra le informazioni dell'infobox */ 
+    margin-top: 50px;
+    padding: 50px;
+    width: 100%;
+    margin-top: auto; /* mette a fondo pagina */
+    color: white;
+    background-color: #222222;
+  }
+  
+  .contenuto-infobox {
+    flex: 1;
+  }
+  
+  .lato-infobox {
+    width: 30%;
+  }
+  
+  .infobox h2, .infobox h3 {
+    margin-top: 0; /*imposta il margine dell'infobox a zero*/ 
+  }
+  
+  .infobox ul {
+    padding: 0;   /* imposta quanto distante sia la lista dal resto delle info*/ 
+    list-style: none;
+  }
+  
+  .infobox ul li {
+    margin-bottom: 3px; /*imposta quanto siano grandi i caratteri della lista*/ 
+  }
+  
+  h1, h2 {
+    margin-top: 0;
+  }
+  
+  p {
+    
+    font-size: 1.2rem; /* imposta la grandezza del tag <p> utilizzato per la descrizione*/ 
+  }
+  
+  a {
+    color: rgb(240, 54, 21); /*colora gli hyperlink del codice rgb selezionato (in questo caso rosso)*/
+  }
+
+  .nav {
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    text-align: center;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    place-items: center;
+  }
+
+  .btn {
+    appearance: none;
+    background-image: linear-gradient(135deg,#62ff4d, #ce690b);
+    border: 2px solid #d8d7d7;      
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(.60, 1, 0.32, 1.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+
+  }
+  
+  .btn:disabled {
+    pointer-events: none;
+  }
+  
+  .btn:hover {
+    box-shadow: rgba(66, 62, 62, 0.432) 0 8px 15px;
+    background-image: linear-gradient(135deg,#4cd63a, #cf6c10);
+    transition: 0.5s;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+.presection{
+  display: flex;
+  flex-wrap: wrap; /*fa adattare il testo al bordo del blocco*/ 
+  justify-content: space-between; /*crea spazio tra i blocchi */ 
+  padding: 20px;
+}
+
+  .section{
+    width: calc(25% - 20px); 
+    background: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;  /*limita fin quando si puo scrivere, in questo caso al bordo box*/ 
+    margin-bottom: 20px;
+    width: 50%; /* larghezza del box */
+    /*padding: %; per eventuale padding*/ 
+    display: flex; 
+    flex-direction: column;  
+  }
